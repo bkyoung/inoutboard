@@ -1,0 +1,114 @@
+html
+{
+    height: 99%;
+}
+
+body
+{
+    height: 100%;
+    font-family: Geneva, Verdana, Arial, Sans;
+    font-size: .8em;
+    background-color: #ECEDEA;
+    background-image: url(/images/BGMainTan.gif);
+}
+
+h2
+{
+    text-align: center;
+}
+
+div.body
+{
+    background-color: white;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+}
+
+table
+{
+    border-collapse: collapse;
+    border: none;
+}
+
+th.board, td.board
+{
+    border-bottom: 1px solid black;
+    text-align: left;
+}
+
+table.board
+{
+    width: 100%;
+}
+
+th.board
+{
+    background: #A5BCC4;
+    background-image: url(/images/BGMenuBar.gif);
+}
+
+table.status
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    border: none;
+    text-align: left;
+}
+
+tr.even
+{
+    background: #ededed;
+}
+
+.shadow {
+    -moz-box-shadow: 5px 5px 5px #666;
+    -webkit-box-shadow: 5px 5px 5px #666;
+    box-shadow: 5px 5px 5px #666;
+}
+
+#simrheader
+{
+    position: relative;
+    vertical-align: top;
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+a:link, a:visited
+{
+    text-decoration: none;
+    color: #005858;
+}
+
+a img {border: none; }
+
+#simrfooter
+{
+    text-align: center;
+    font-size: .7em;
+}
+
+#logo
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+#simrnavigation
+{
+    text-align: right;
+}
+
+.Out
+{
+    color: #CD050C;
+    font-style: italic;
+    /*font-weight: bold;*/
+}

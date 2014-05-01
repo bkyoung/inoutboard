@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}LAS On-site Board{% endblock %}
+{% block content %}
+<h2>Laboratory Animal Services On-site Board</h2>
+<div class="body rounded-corners shadow">
+  <table class="board">
+        <tr>
+            <th class="board">Phone</th>
+            <th class="board">Name</th>
+            <th class="board">Status</th>
+            <th class="board">Comment</th>
+            <th class="board">Estimated Return</th>
+            <th class="board" width="100">Last Updated</th>
+        </tr>
+        {% for employee in employees %}
+            <tr class="{% cycle 'odd' 'even' %} {{ employee.status }}">
+                <td class="board">{{ employee.phone }}</td>
+                <td class="board">{{ employee.full_name }}</td>
+                <td class="board">{{ employee.status }}</td>
+                <td class="board">{{ employee.comment }}</td>
+                <td class="board">{{ employee.estimated_return }}</td>
+                <td class="board">{{ employee.last_changed|date:"d M" }}</td>
+            </tr>
+        {% endfor %}
+  </table>
+  <br />
+  <br />
+  <br />
+  <form action="" method="post">
+    <table class="status">
+        <tr>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Comment</th>
+            <th>Type Your Own</th>
+            <th>Estimated Return</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                <select name="full_name">
+                    <option value="">----</option>
+                    {% for e in employees %}
+                    <option value="{{ e.id }}">{{ e.full_name }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+            <td>
+                <select name="status">
+                    <option value="">----</option>
+                    <option value="In">In</option>
+                    <option value="Out">Out</option>
+                </select>
+            </td>
+            <td>
+                <select name="comment1">
+                    <option value="">----</option>
+                    <option value="Away From Desk">Away From Desk</option>
+                    <option value="On Leave">On Leave</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Meeting">Meeting</option>
+                    <option value="Sick">Sick</option>
+                    <option value="Out IF">Out IF</option>
+                    <option value="In IF">In IF</option>
+                    <option value="SSF">SSF</option>
+                </select>
+            </td>
+            <td><input type="text" name="comment2" /></td>
+            <td><input type="text" name="estimated_return" /></td>
+            <td><input type="submit" value="Update"></td>
+        </tr>
+    </table>
+  </form>
+</div>
+{% endblock %}

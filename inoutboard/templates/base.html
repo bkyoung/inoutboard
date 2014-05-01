@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta http-equiv="Content-Type" content="text/html; 
+                    charset=utf-8" />
+                <meta http-equiv="refresh" content="30" />
+                <meta http-equiv='pragma' content='nocache'>
+                <style type="text/css">
+                    {% include "base.css" %}
+                </style>
+	</head>
+	<body>
+            <div id="simrheader">
+                <p>
+                    <a href="/">
+                        <img id="logo" 
+                         src="/images/StowersWebMark.gif" 
+                         alt="Your Organization Here" />
+                    </a>
+                    <a href="/">Home</a> | 
+                    <a href="/admin">Admin</a>
+                </p>
+            </div>
+            {% block content %}{% endblock %}
+            <div id="simrfooter">
+                <br />
+                <p>
+                    © 2011 Your Organization Here.  1000 E. 50th St., Nowhere City, MA 12345
+                </p>
+            </div>
+	</body>
+</html>

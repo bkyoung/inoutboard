@@ -1,0 +1,123 @@
+<div id="simrheader">
+                <p id="simradmin">
+                    <a href="/"><img id="logo" src="/images/WebMark.gif" alt="Your Organization Here" /></a>
+                    <a href="/">Home</a> | 
+                    <a href="/admin">Admin</a>
+                </p>
+</div>
+
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+
+{% block title %}{{ title }} | {% trans 'LAS Employee Admin' %}{% endblock %}
+
+
+{% block extrastyle %}
+<style>
+#container {
+    background-image: url(/images/BGMainTan.gif);
+}
+
+.dashboard, .change-list, .login {
+    height: 100%;
+    font-family: Geneva, Verdana, Arial, Sans;
+    font-size: .8em;
+    background-color: #ECEDEA;
+    background-image: url(/images/BGMainTan.gif);
+}
+ .row1 {
+    background-color: white;
+}
+
+.row2 {
+    background-color: #ededed;
+}
+
+#header {
+    /*background: none;*/
+    background: #A5BCC4;
+    background-image: url(/images/BGMenuBar.gif);
+}
+
+#branding h1 {
+    /*color: #30626C;*/
+    /*margin-top: 15px;*/
+    color: black;
+    font-weight: bold;
+    /*text-align: center;*/
+}
+
+/*#user-tools a:link
+{
+    color: black;
+}*/
+
+/*#header
+{
+    color: black;
+}*/
+
+.module h2, .module caption, .inline-group h2 {
+    background: #A5BCC4;
+    background-image: url(/images/BGMenuBar.gif);
+}
+body
+{
+    height: 99%;
+    background-image: url(/images/BGMainTan.gif);
+}
+#simradmin
+{
+    padding-top: 9px;
+    padding-right: 8px;
+    padding-bottom: 10px;
+}
+#simrheader
+{
+    position: relative;
+    vertical-align: top;
+    text-align: right;
+}
+#simrfooter
+{
+    text-align: center;
+    font-size: .7em;
+}
+#logo
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 0 0 0;
+    padding-top: 10px;
+    padding-left: 8px;
+}
+
+a:link, a:visited
+{
+    text-decoration: none;
+    color: #005858;
+}
+
+a.section:link, a.section:visited 
+{
+    color: black;
+    text-decoration: none;
+}
+</style>
+{% endblock %}
+
+
+{% block branding %}
+<h1 id="site-name">{% trans 'In/Out Board Admin Panel' %}</h1>
+{% endblock %}
+
+
+{% block nav-global %}{% endblock %}
+<div id="simrfooter">
+    <br />
+    <p>
+        © 2011 Your Organization Here.  1000 E. 50th St., Nowhere City, MA 12345
+    </p>
+</div>
